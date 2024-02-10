@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <span>Room Temperature</span>
+</mat-toolbar>
+<div *ngIf="this.service.loggedIn" class="dialog-container">
+    <mat-card class="center-card">
+        <mat-card-title>Provsion</mat-card-title>
+        <mat-card-content class="row">
+            <mat-form-field class="col-4">
+                <mat-label>Room Name/Number</mat-label>
+                <input [(ngModel)]="roomName" matInput type="text">
+            </mat-form-field>
+            <mat-form-field class="col-4">
+                <mat-label>Device ID</mat-label>
+                <input [(ngModel)]="deviceId" matInput type="text">                
+            </mat-form-field>
+            <button class="col-2" [disabled]="roomName === '' || deviceId === ''" mat-raised-button color="primary" (click)="addDevice()">Add</button>                  
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="canvas-container">
+    <mat-card class="canvas text-center">
+        <canvas style="height: 100%; width: 100%;" baseChart [datasets]="data" [labels]="label" [options]="chartOptions"
+            [type]="lineChartType"></canvas>
+    </mat-card>
+</div>

@@ -1,0 +1,40 @@
+.canvas-container {
+    display: flex;
+    justify-content: center;
+}
+
+.canvas {        
+    margin-top:2%;
+    height : 400px;
+    width: 600px;
+}
+
+.heading{
+    margin-left: 43%;
+    margin-top: 3%;
+    font-weight: 500;
+}
+
+
+.full-width {
+    width: 100%;
+}
+
+.dialog-container {
+   /* margin-left : 2%; */
+   margin-top: 2%;
+   /* margin-left: 5%; */
+   width:100%;
+   display: flex;
+   justify-content: center;
+}
+
+.center-card {   
+    text-align: center; 
+    width: 90%;
+}
+
+.newUserStyle {
+    margin-left: 40%;
+    margin-top: 5%;
+}
